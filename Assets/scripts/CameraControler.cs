@@ -8,10 +8,10 @@ public class CameraControler : MonoBehaviour
 
   private Vector3 velocity = Vector3.zero;
 
-  private void update()
+  private void Update()
   {
     transform.position = Vector3.SmoothDamp(transform.position, new Vector3(currentPositionX, transform.position.y, transform.position.z),
-     ref velocity, speed * Time.deltaTime);
+     ref velocity, speed);
   }
 
   public void MoveToNewRoom(Transform _newRoom)
