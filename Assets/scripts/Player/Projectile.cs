@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -31,6 +30,9 @@ public class Projectile : MonoBehaviour
         hit = true;
         boxCollider.enabled = false;
         anim.SetTrigger("explode");
+
+        if(collision.tag == "Enemy")
+            collision.GetComponent<Health>().TakeDmg(1);
     }
     public void SetDirection(float _direction)
     {
