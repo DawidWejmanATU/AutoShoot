@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
    [SerializeField] private float startingHealth;
-   public float currentHealth { get; private set;}
-   private Animator anim;
-   private bool dead;
+   public float currentHealth { get; private set;}// curent health getter and setter
+   private Animator anim;// animation veriable 
+   private bool dead;//bool if character is dead or not 
 
    private void Awake()
    {
     currentHealth = startingHealth;
-    anim = GetComponent<Animator>();
+    anim = GetComponent<Animator>();//component to the animation
    }
    public void TakeDmg(float _dmg)
    {
